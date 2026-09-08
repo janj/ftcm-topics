@@ -1,0 +1,259 @@
+/* Follow the Clucking Money — shared site styles
+   Plain CSS, no framework. Keep it simple enough that anyone
+   can open this file and tweak a color or spacing value. */
+
+:root {
+  --bg: #fdfcf9;
+  --bg-alt: #f4f1ea;
+  --text: #1c1c1c;
+  --text-muted: #5a5a5a;
+  --accent: #b3651e;
+  --border: #ddd6c8;
+  --max-width: 42rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16171a;
+    --bg-alt: #1e2024;
+    --text: #eceae5;
+    --text-muted: #a7a49b;
+    --accent: #e0985a;
+    --border: #33353a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+/* ---- Layout ---- */
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+header.site-header {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+header.site-header .brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--text);
+}
+
+header.site-header .kicker {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+nav.crumbs {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+nav.crumbs a {
+  color: var(--text-muted);
+}
+
+/* ---- Typography ---- */
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 2.25rem 0 0.75rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+.topic-label {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+hr.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* ---- Stat callouts ---- */
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.stat {
+  flex: 1 1 12rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.stat .value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+}
+
+.stat .label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ---- Q&A / challenge blocks ---- */
+
+.challenge {
+  background: var(--bg-alt);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.challenge .question {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* ---- Tables ---- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ---- Buttons / nav links between versions ---- */
+
+.version-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.version-toggle a {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.version-toggle a.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---- Topic index cards (landing pages) ---- */
+
+.topic-card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.topic-card h3 {
+  margin-top: 0;
+}
+
+.topic-card .links {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.topic-card .links a {
+  margin-right: 1rem;
+}
+
+/* ---- Source placeholders ---- */
+
+.source {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---- Footer ---- */
+
+footer.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .stats {
+    flex-direction: column;
+  }
+}
