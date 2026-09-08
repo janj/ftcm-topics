@@ -11,26 +11,20 @@ once one is configured — see below).
 
 ## How it's organized
 
-Each topic gets its own folder with three pages:
+Each topic gets its own folder with a single page:
 
 ```
 <topic>/
-├── index.html          # topic overview / table of contents
-├── start-simple.html   # short, workshop-slide-style version
-└── advanced.html       # full version — data, methodology, citations
+└── index.html   # the whole topic — key numbers, explanation, sources
 ```
 
-- **Start simple** is the five-minute version: the key numbers, the core
-  question, the takeaway. No jargon, minimal setup.
-- **Advanced** covers the same material in the same section order, but with
-  full data tables, methodology notes, and a citation for every figure.
-
-Both versions link to each other (the toggle near the top of each page), so
-a reader can start wherever fits the time they have.
+One page per topic, self-contained (data, explanation, and a numbered
+sources list at the bottom), rather than split across a short and a
+detailed version.
 
 The root `index.html` lists every published topic and links to each one's
-start-simple and advanced pages. `roads/` is the first topic and the
-reference implementation of this pattern.
+page. `roads/` is the first topic and the reference implementation of this
+pattern.
 
 ## Sourcing rules
 
@@ -53,23 +47,24 @@ implied.
 
 ## Adding a new topic
 
-1. Copy the `roads/` folder to `<new-topic>/`. The filenames inside stay the
-   same (`index.html`, `start-simple.html`, `advanced.html`).
-2. Update the `<title>`, headings, and content for the new topic. Keep the
-   section-header HTML comments as a scaffold while drafting — they mark
-   where each piece of content goes.
-3. Add a `.topic-card` entry linking to the new topic on the root
+1. Copy `roads/index.html` to `<new-topic>/index.html`.
+2. Update the `<title>`, headings, and content for the new topic, including
+   the numbered sources list at the bottom.
+3. Add a `.topic-card` entry linking to the new topic's page on the root
    `index.html`.
 4. Leave `[SOURCE: ...]` placeholders for any figure without a citation yet.
 
 ## Styling
 
-All pages share `assets/style.css` — plain CSS, no framework, no build
-step. It's intentionally minimal: system fonts, a light theme with an
-automatic dark mode (via `prefers-color-scheme`), and a handful of reusable
-patterns (stat callouts, Q&A "challenge" blocks, data tables) used across
-topics. Any group member can open the file directly and adjust a color or
-spacing value without tooling.
+The root `index.html` uses the shared `assets/style.css` — plain CSS, no
+framework, no build step, with a light theme and automatic dark mode (via
+`prefers-color-scheme`).
+
+Topic pages (e.g. `roads/index.html`) are self-contained instead: each
+carries its own inline `<style>` block rather than linking the shared
+stylesheet, so a topic can be copied, edited, and shared as a single file.
+Any group member can open one directly and adjust a color or spacing value
+without touching anything else on the site.
 
 Chart images or generated SVGs go in `assets/charts/`.
 
