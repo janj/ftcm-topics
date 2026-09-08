@@ -146,14 +146,15 @@
 
 <section>
 <h2>What this looks like over 30 years</h2>
-<p class="timeline-note">Illustrative model, not a measurement of specific Petaluma street segments. Treatment intervals and costs are drawn from published pavement-engineering figures (cited below); the timing of decline from Fair to Failed in the "never treated" row is illustrative of the deterioration curve described above, not a dated forecast for any actual street.</p>
+<p class="timeline-note">Illustrative model, not a measurement of a specific street's actual condition history. Treatment intervals are drawn from published pavement-engineering figures (cited below); the timing of decline from Fair to Failed in the "never treated" row illustrates the deterioration curve described above, not a dated forecast for any real street.</p>
+<p>To make the per-square-yard figures concrete: Petaluma's General Plan sets a preferred travel-lane width of 10.5 feet on arterial streets.<sup><a href="#src9">9</a></sup> A four-lane arterial like <strong>North McDowell Boulevard</strong> is therefore about 42 feet of pavement width; one mile of it works out to roughly <strong>24,640 square yards</strong> of pavement (42 ft × 5,280 ft ÷ 9 sq ft/sq yd). The chart below applies the same per-square-yard costs from the table above to that one-mile quantity.</p>
 
 <div class="chart-wrap">
-<svg viewBox="0 0 700 230" role="img" aria-label="Timeline chart comparing cumulative cost per square yard over 30 years for a road kept Good, a road kept Fair, and a road left untreated until reconstruction.">
+<svg viewBox="0 0 700 230" role="img" aria-label="Timeline chart comparing cumulative cost over 30 years for one mile of a four-lane Petaluma arterial like North McDowell Boulevard, kept Good, kept Fair, or left untreated until reconstruction.">
   <!-- baselines -->
-  <line x1="140" y1="50"  x2="600" y2="50"  stroke="#e4dcc9" stroke-width="2"/>
-  <line x1="140" y1="110" x2="600" y2="110" stroke="#e4dcc9" stroke-width="2"/>
-  <line x1="140" y1="170" x2="600" y2="170" stroke="#e4dcc9" stroke-width="2"/>
+  <line x1="150" y1="50"  x2="600" y2="50"  stroke="#e4dcc9" stroke-width="2"/>
+  <line x1="150" y1="110" x2="600" y2="110" stroke="#e4dcc9" stroke-width="2"/>
+  <line x1="150" y1="170" x2="600" y2="170" stroke="#e4dcc9" stroke-width="2"/>
 
   <!-- row labels -->
   <text x="0" y="46"  font-size="12" fill="#2a2620" font-weight="600">Kept Good</text>
@@ -164,34 +165,34 @@
   <text x="0" y="180" font-size="10.5" fill="#6b6355">→ reconstruction</text>
 
   <!-- Good row: treatments at yr 8, 16, 24 -->
-  <circle cx="263" cy="50" r="6" fill="#e2a34f"/>
-  <circle cx="385" cy="50" r="6" fill="#e2a34f"/>
-  <circle cx="508" cy="50" r="6" fill="#e2a34f"/>
-  <text x="263" y="38" font-size="10.5" fill="#2a2620" text-anchor="middle">$5</text>
-  <text x="385" y="38" font-size="10.5" fill="#2a2620" text-anchor="middle">$5</text>
-  <text x="508" y="38" font-size="10.5" fill="#2a2620" text-anchor="middle">$5</text>
+  <circle cx="270" cy="50" r="6" fill="#e2a34f"/>
+  <circle cx="390" cy="50" r="6" fill="#e2a34f"/>
+  <circle cx="510" cy="50" r="6" fill="#e2a34f"/>
+  <text x="270" y="38" font-size="10.5" fill="#2a2620" text-anchor="middle">$123K</text>
+  <text x="390" y="38" font-size="10.5" fill="#2a2620" text-anchor="middle">$123K</text>
+  <text x="510" y="38" font-size="10.5" fill="#2a2620" text-anchor="middle">$123K</text>
 
   <!-- Fair row: treatments at yr 12, 24 -->
-  <circle cx="324" cy="110" r="7" fill="#a35420"/>
-  <circle cx="508" cy="110" r="7" fill="#a35420"/>
-  <text x="324" y="98" font-size="10.5" fill="#2a2620" text-anchor="middle">$30</text>
-  <text x="508" y="98" font-size="10.5" fill="#2a2620" text-anchor="middle">$30</text>
+  <circle cx="330" cy="110" r="7" fill="#a35420"/>
+  <circle cx="510" cy="110" r="7" fill="#a35420"/>
+  <text x="330" y="98" font-size="10.5" fill="#2a2620" text-anchor="middle">$739K</text>
+  <text x="510" y="98" font-size="10.5" fill="#2a2620" text-anchor="middle">$739K</text>
 
   <!-- Neglected row: one reconstruction at yr ~20 -->
-  <circle cx="447" cy="170" r="9" fill="#803712"/>
-  <text x="447" y="156" font-size="10.5" fill="#2a2620" text-anchor="middle">$130 (reconstruction)</text>
+  <circle cx="450" cy="170" r="9" fill="#803712"/>
+  <text x="450" y="156" font-size="10.5" fill="#2a2620" text-anchor="middle">$3.2M (reconstruction)</text>
 
   <!-- year axis -->
-  <line x1="140" y1="200" x2="600" y2="200" stroke="#e4dcc9" stroke-width="1"/>
-  <text x="140" y="216" font-size="10.5" fill="#6b6355" text-anchor="middle">yr 0</text>
-  <text x="293" y="216" font-size="10.5" fill="#6b6355" text-anchor="middle">yr 10</text>
-  <text x="447" y="216" font-size="10.5" fill="#6b6355" text-anchor="middle">yr 20</text>
+  <line x1="150" y1="200" x2="600" y2="200" stroke="#e4dcc9" stroke-width="1"/>
+  <text x="150" y="216" font-size="10.5" fill="#6b6355" text-anchor="middle">yr 0</text>
+  <text x="300" y="216" font-size="10.5" fill="#6b6355" text-anchor="middle">yr 10</text>
+  <text x="450" y="216" font-size="10.5" fill="#6b6355" text-anchor="middle">yr 20</text>
   <text x="600" y="216" font-size="10.5" fill="#6b6355" text-anchor="middle">yr 30</text>
 
   <!-- totals -->
-  <text x="690" y="46"  font-size="12" fill="#2a2620" font-weight="700" text-anchor="end">$15 total</text>
-  <text x="690" y="106" font-size="12" fill="#2a2620" font-weight="700" text-anchor="end">$60 total</text>
-  <text x="690" y="166" font-size="12" fill="#2a2620" font-weight="700" text-anchor="end">$130 total</text>
+  <text x="690" y="46"  font-size="12" fill="#2a2620" font-weight="700" text-anchor="end">$370K total</text>
+  <text x="690" y="106" font-size="12" fill="#2a2620" font-weight="700" text-anchor="end">$1.48M total</text>
+  <text x="690" y="166" font-size="12" fill="#2a2620" font-weight="700" text-anchor="end">$3.2M total</text>
 </svg>
 </div>
 <div class="legend-row">
@@ -201,12 +202,12 @@
 </div>
 
 <table>
-<tr><th>Starting condition</th><th>Maintenance interval</th><th>Cost per event</th><th>30-yr total</th></tr>
-<tr><td>Good</td><td>Seal every ~8 years<sup><a href="#src8">8</a></sup></td><td class="num">$5/sq yd</td><td class="num">~$15/sq yd</td></tr>
-<tr><td>Fair</td><td>Overlay every ~10–12 years<sup><a href="#src7">7</a></sup></td><td class="num">~$30/sq yd</td><td class="num">~$60/sq yd</td></tr>
-<tr><td>Never treated</td><td>One forced reconstruction, ~year 20</td><td class="num">$130+/sq yd</td><td class="num">~$130+/sq yd</td></tr>
+<tr><th>Starting condition</th><th>Maintenance interval</th><th>Cost per event (1 mi, 4-lane arterial)</th><th>30-yr total</th></tr>
+<tr><td>Good</td><td>Seal every ~8 years<sup><a href="#src8">8</a></sup></td><td class="num">$123,200 (~$5/sq yd)</td><td class="num">$369,600</td></tr>
+<tr><td>Fair</td><td>Overlay every ~10–12 years<sup><a href="#src7">7</a></sup></td><td class="num">$739,200 (~$30/sq yd)</td><td class="num">$1,478,400</td></tr>
+<tr><td>Never treated</td><td>One forced reconstruction, ~year 20</td><td class="num">$3,203,200 (~$130/sq yd)</td><td class="num">$3,203,200</td></tr>
 </table>
-<p class="sources">Holding a road at Good costs roughly a ninth of what one reconstruction cycle costs, over the same 30-year window — and the "never treated" road still needs that $130+/sq yd reconstruction before it can be held at Good again, so the comparison restarts from behind rather than catching up for free.</p>
+<p class="sources">Holding a road at Good costs roughly a ninth of what one reconstruction cycle costs, over the same 30-year window — $369,600 versus $3.2 million for one mile of a four-lane arterial like North McDowell. And the "never treated" street still needs that $3.2 million reconstruction before it can be held at Good again, so the comparison restarts from behind rather than catching up for free.</p>
 
 <div class="callout">
 <strong>These numbers are optimistic, on all three lines.</strong> The "never treated" total leaves out reactive costs — patching potholes on a failing road isn't free, it's just inefficient, and a real neglected street accrues some spending well before year 20. The reconstruction total is also the raw construction cost only; Petaluma's actual backlog is being financed through bonds at ~2.85% interest, so the real cash cost of reaching that point is higher than the sticker price shown. If anything, correcting for both would widen the gap between "kept good" and "never treated," not narrow it.
@@ -239,6 +240,7 @@
 <li id="src6">KYOVA Interstate Planning Commission, <a href="https://kyovaipc.org/Executive_Summary_DRAFT_KYOVA_Pavement_Management_7_12_19.pdf" target="_blank" rel="noopener">Pavement Management Program Executive Summary</a></li>
 <li id="src7">Purdue University / Indiana LTAP, <a href="https://docs.lib.purdue.edu/jtrp/1150" target="_blank" rel="noopener">Joint Transportation Research Program report</a> — 2–3 course HMA overlay service life of 10–12 years, consistent with INDOT design manual figures</li>
 <li id="src8">RoadResource.org, <a href="https://roadresource.org/treatment_resources/slurry_seal/about_expectations" target="_blank" rel="noopener">Slurry Seal — Performance Requirements &amp; Expectations</a> — 7–10 years of life extension on pavement in good condition</li>
+<li id="src9">City of Petaluma General Plan, <a href="https://static1.squarespace.com/static/5ea880f6d9a2075c7b7f54af/t/69c69e283480122b47a8a842/1774624296935/PetalumaGP_PublicDraft_Transportation.pdf" target="_blank" rel="noopener">Transportation Element, Table TP-1</a> — preferred travel-lane width of 10.5 ft on arterial streets</li>
 </ol>
 <p class="sources" style="margin-top:10px;">Always cite City of Petaluma official records and MTC/StreetSaver documentation directly when using these figures elsewhere.</p>
 </section>
