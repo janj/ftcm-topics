@@ -2,52 +2,153 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Roads &amp; Pavement Condition — Follow the Clucking Money</title>
-<meta name="description" content="Petaluma's road and pavement-condition finances, explained with sources.">
-<link rel="stylesheet" href="../assets/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roads &amp; PCI — Follow the Clucking Money</title>
+<style>
+  :root {
+    --bg: #fdf9f0;
+    --card: #f4eee1;
+    --ink: #2a2620;
+    --sub: #6b6355;
+    --accent: #b5652f;
+    --line: #e4dcc9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+  header.site {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+  .tagline { color: var(--sub); font-size: 0.92rem; margin-bottom: 14px; }
+  nav.top { font-size: 0.9rem; margin-bottom: 24px; }
+  nav.top a { color: var(--ink); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.75rem;
+    color: var(--sub);
+    margin-bottom: 6px;
+  }
+  h1 { font-size: 2rem; margin: 0 0 18px; }
+  h2 { font-size: 1.3rem; margin: 0 0 10px; }
+  h3 { font-size: 1.05rem; margin: 20px 0 6px; }
+  p { margin: 0 0 14px; }
+  section { margin-bottom: 30px; }
+  .stat-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+  .stat {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 16px 18px;
+    flex: 1 1 200px;
+  }
+  .stat .num { color: var(--accent); font-weight: 700; font-size: 1.5rem; display: block; }
+  .stat .label { font-size: 0.85rem; color: var(--sub); margin-top: 2px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 0.92rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  th { color: var(--sub); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  td.num { color: var(--accent); font-weight: 700; }
+  .callout {
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    margin: 14px 0;
+  }
+  .sources {
+    font-size: 0.85rem;
+    color: var(--sub);
+  }
+  .sources li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; font-size: 0.85rem; color: var(--sub); }
+</style>
 </head>
 <body>
-<div class="page">
+<div class="wrap">
 
-  <header class="site-header">
-    <a class="brand" href="../index.html">🐔 Follow the Clucking Money</a>
-    <span class="kicker">Topic pages — Petaluma municipal finance, explained with sources</span>
-    <nav class="crumbs"><a href="../index.html">All topics</a></nav>
-  </header>
+<header class="site">🐔 Follow the Clucking Money</header>
+<div class="tagline">Topic pages — Petaluma municipal finance, explained with sources</div>
+<nav class="top"><a href="../index.html">All topics</a></nav>
 
-  <main>
-    <div class="topic-label">Topic 01</div>
-    <h1>Roads &amp; Pavement Condition</h1>
+<hr>
 
-    <p>
-      This topic covers how Petaluma measures and pays for street condition:
-      why you'll hear different numbers for the same thing, how the city
-      decides what gets fixed, and whether the city is keeping pace with
-      what voters were told Measure U would fund.
-    </p>
+<div class="eyebrow">Topic 01 · Roads</div>
+<h1>Roads &amp; Pavement Condition (PCI)</h1>
 
-    <div class="version-toggle">
-      <a href="start-simple.html">Start simple →</a>
-      <a href="advanced.html">Advanced</a>
-    </div>
+<section>
+<p>Petaluma tracks street condition using the Pavement Condition Index (PCI), a 0–100 score. As of the most recent regional survey, the city's network averages around <strong>50</strong> (MTC's 2024 three-year moving average), placing it in the "At Risk" band and below the Bay Area's weighted average of 67.<sup><a href="#src1">1</a></sup> Older city documents still cite a PCI of 42, sourced to a 2019 survey — a five-year-old figure, not the current one.<sup><a href="#src2">2</a></sup></p>
+</section>
 
-    <!-- ============================================================
-         Optional: short outline / table of contents for this topic,
-         mirroring the section list in start-simple.html and
-         advanced.html, once that content exists.
-    ============================================================= -->
+<section>
+<h2>What PCI measures</h2>
+<p>PCI comes from a standardized visual survey (ASTM D6433) of cracking, patching, rutting, and other distress, converted into a single 0–100 score.<sup><a href="#src3">3</a></sup> The score maps directly to what kind of repair a street needs:</p>
+<table>
+<tr><th>PCI range</th><th>Condition</th><th>Typical treatment</th><th>Approx. cost</th></tr>
+<tr><td>70–100</td><td>Good</td><td>Seal / slurry (preventive)</td><td class="num">~$5/sq yd</td></tr>
+<tr><td>50–69</td><td>Fair</td><td>Overlay / light rehab</td><td class="num">$20–40/sq yd</td></tr>
+<tr><td>25–49</td><td>Poor</td><td>Heavy rehab</td><td class="num">$40–130/sq yd</td></tr>
+<tr><td>0–24</td><td>Failed</td><td>Full reconstruction</td><td class="num">$130+/sq yd</td></tr>
+</table>
+<p class="sources">Cost figures per StreetSaver's published cost tiers.<sup><a href="#src4">4</a></sup> Petaluma's own published bands are simpler — 0–39 reconstruction, 40–69 rehabilitation, 70–100 maintenance.<sup><a href="#src5">5</a></sup></p>
+</section>
 
-  </main>
+<section>
+<h2>Why letting a road degrade doesn't save money</h2>
+<p>The claim: skip maintenance now, save the money (or invest it), and pay the larger repair bill later — for less overall. This doesn't hold up, for three reasons.</p>
 
-  <footer class="site-footer">
-    <p>
-      Follow the Clucking Money is an independent, volunteer effort.
-      Every figure on this site is either sourced to a public record or
-      labeled as an estimate. Spot an error?
-      <a href="[SOURCE: contact link/email]">Let us know</a> and we'll fix it.
-    </p>
-  </footer>
+<h3>1. The cost jump isn't linear — it's a step change</h3>
+<p>A road stays watertight while it's in good condition, so preventive treatment is cheap resurfacing. Once cracking lets water into the base layer, the base itself fails, and the fix changes from "seal it" to "rebuild it." That's a <strong>26–30x</strong> jump in unit cost between prevention and full reconstruction, not a gradual increase.<sup><a href="#src4">4</a></sup></p>
+
+<h3>2. The deterioration curve accelerates before the money would even come due</h3>
+<p>Pavement condition doesn't decline steadily — it holds up reasonably well, then drops fast. One regional pavement study places that acceleration point ("the cliff") around <strong>PCI 55–57</strong>.<sup><a href="#src6">6</a></sup> Petaluma's network average (~50) is already past that point — meaning further deferral is happening in the steepest, most expensive part of the curve, not a stable holding pattern.</p>
+
+<h3>3. The savings have to actually be saved — and they weren't</h3>
+<p>For "defer and invest" to beat "maintain on schedule," the deferred money would need to earn a return that outpaces a 26–30x cost multiplier over the deferral period. No realistic investment return does that. More importantly, the underlying assumption — that deferred maintenance money gets saved and invested — doesn't match what happened in Petaluma: the city's own budget document attributes its backlog directly to "funding shortfalls over many years," not deferred savings.<sup><a href="#src2">2</a></sup> The debt is now being financed through bonds at roughly 2.85% interest, meaning the city pays financing costs on top of the inflated repair cost — the opposite of a savings outcome.<sup><a href="#src2">2</a></sup></p>
+
+<div class="callout">
+<strong>The one narrow exception:</strong> once a road has already dropped to roughly PCI 20–25, the repair type (full reconstruction) no longer changes with further delay, so the repair cost is effectively fixed. At that point, deferring it isn't a mistake — it's freeing up budget for streets where the money still buys a cheaper fix. This is different from deferring a road still in the 40–60 range, which is the most expensive place to delay, not the cheapest.<sup><a href="#src4">4</a></sup>
+</div>
+
+<div class="stat-row">
+<div class="stat"><span class="num">26–30x</span><span class="label">cost multiplier, prevention vs. reconstruction</span></div>
+<div class="stat"><span class="num">~55–57</span><span class="label">PCI where deterioration accelerates</span></div>
+<div class="stat"><span class="num">2.85%</span><span class="label">bond interest rate financing Petaluma's backlog</span></div>
+</div>
+</section>
+
+<section>
+<h3 class="sources" style="text-transform:uppercase;letter-spacing:.03em;font-size:.8rem;color:var(--sub);margin-bottom:8px;">Sources</h3>
+<ol class="sources">
+<li id="src1">MTC, <a href="https://mtc.ca.gov/sites/default/files/documents/2025-11/%20PCI_table_2024_data_11-10-2025.pdf" target="_blank" rel="noopener">Pavement Condition of Bay Area Jurisdictions, 2024</a></li>
+<li id="src2">City of Petaluma, <a href="https://storage.googleapis.com/proudcity/petalumaca/2026/05/2cb09049-fy-2026-2027-city-of-petaluma-proposed-operating-and-capital-improvement-budget.pdf" target="_blank" rel="noopener">FY2026–27 Proposed Operating &amp; Capital Improvement Budget</a>, General Government Debt / 2021 Lease Revenue Bonds section</li>
+<li id="src3">ASTM D6433; overview via <a href="https://en.wikipedia.org/wiki/Pavement_condition_index" target="_blank" rel="noopener">Pavement condition index — Wikipedia</a></li>
+<li id="src4">StreetSaver, <a href="https://streetsaver.com/pavement-management-programs-part-1-why-worst-first-isnt-always-best-for-your-asset-management/" target="_blank" rel="noopener">"Why 'Worst First' Isn't Always Best for Your Asset Management"</a></li>
+<li id="src5">City of Petaluma, <a href="https://cityofpetaluma.org/street-pavement/" target="_blank" rel="noopener">Street Maintenance &amp; Improvements</a></li>
+<li id="src6">KYOVA Interstate Planning Commission, <a href="https://kyovaipc.org/Executive_Summary_DRAFT_KYOVA_Pavement_Management_7_12_19.pdf" target="_blank" rel="noopener">Pavement Management Program Executive Summary</a></li>
+</ol>
+<p class="sources" style="margin-top:10px;">Always cite City of Petaluma official records and MTC/StreetSaver documentation directly when using these figures elsewhere.</p>
+</section>
+
+<footer>Follow the Clucking Money — Petaluma municipal finance, explained with sources.</footer>
 
 </div>
 </body>
